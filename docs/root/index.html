@@ -19,10 +19,18 @@
             $("#calculate").on("click", function() {
                 const vertical = $("#vertical").val();
                 const horizontal = $("#horizontal").val();
+<<<<<<< HEAD
                 const diagonal = Math.sqrt(Math.pow(vertical) + Math.pow(horizontal));
                 let h = '<p>斜辺の長さは';
                     h += diagonal;
                     h += 'です</p>';
+=======
+                const diagonal2 = Math.pow(vertical) + Math.pow(horizontal);
+                const diagonal = Math.sqrt(diagonal2);
+                let h = '<p>斜辺の長さは';
+                    h += diagonal;
+                    h += ' です</p>';
+>>>>>>> 7d809437a48fdd58dd8cb4e6c63c838eb3f78584
                 $("#output").html(h);
             });
         </script>
