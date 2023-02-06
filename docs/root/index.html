@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>平方根</title>
+    </head>
+    <body>
+        <h1>ピタゴラス</h1>
+        <form>
+            <label>縦の長さ</label>
+            <input type="text" name="vertical" id="vertical">
+            <label>横の長さ</label>
+            <input type="text" name="horizontal" id="horizontal">
+            <button type="submit" id="calculate"></button>
+        </form>
+        <div id="output"></div>
+
+        <script>
+            $("#calculate").on("click", function() {
+                let vertical = $("#vertical").val();
+                let horizontal = $("#horizontal").val();
+                let diagonal = Math.sqrt(Math.pow(vertical) + Math.pow(horizontal));
+                let output = '<p>斜辺の長さは'
+                    output += diagonal
+                    output += 'です</p>'
+                $("#output").append(output);
+            });
+        </script>
+    </body>
+</html>

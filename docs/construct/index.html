@@ -13,6 +13,7 @@
                     <option value="simple">単純梁</option>
                     <option value="truss">トラス橋</option>
                 </select>
+                <button type="button" id="type">種類を決定（後から変更可）</button>
             </div>
             <div id="simple">
 
@@ -26,19 +27,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
         <!--選択した種類によってinputを変化-->
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                let dispSubBox = function(subId) {
-                    [...document.querySelectorAll("#type_selector")].forEach(function(elm) {
-                        elm.style.display = elm.id===subId ? "inline": "none"
-                    });
+            $("#type").on("click", function() {
+                const t = $("#type_selector").val();
+                if (t == "simple") {
+                    
                 }
-                dispSubBox();
-                
-                document.getElementById("type_selector").addEventListener("change", function(event) {
-                    const elm = event.target;
-                    dispSubBox(elm.value);
-                });
-            });
+            })
         </script>
         <!--calculate script-->
         <script>
