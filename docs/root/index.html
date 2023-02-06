@@ -17,13 +17,14 @@
 
         <script>
             $("#calculate").on("click", function() {
-                let vertical = $("#vertical").val();
-                let horizontal = $("#horizontal").val();
-                let diagonal = Math.sqrt(Math.pow(vertical) + Math.pow(horizontal));
-                let output = '<p>斜辺の長さは'
-                    output += diagonal
-                    output += 'です</p>'
-                $("#output").append(output);
+                const vertical = $("#vertical").val();
+                const horizontal = $("#horizontal").val();
+                const diagonal2 = Math.pow(vertical) + Math.pow(horizontal);
+                const diagonal = Math.sqrt(diagonal2);
+                let h = '<p>斜辺の長さは';
+                    h += diagonal;
+                    h += ' です</p>';
+                $("#output").html(h);
             });
         </script>
     </body>
